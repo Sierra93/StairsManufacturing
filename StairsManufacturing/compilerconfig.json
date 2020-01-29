@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "wwwroot/css/HeaderStyles.css",
+    "inputFile": "wwwroot/less/HeaderStyles.less"
+  },
+  {
+    "outputFile": "wwwroot/css/MainStyles.css",
+    "inputFile": "wwwroot/less/MainStyles.less"
+  },
+  {
+    "outputFile": "wwwroot/css/FooterStyles.css",
+    "inputFile": "wwwroot/less/FooterStyles.less"
+  }
+]
