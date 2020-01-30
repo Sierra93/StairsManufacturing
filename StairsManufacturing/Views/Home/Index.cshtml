@@ -65,8 +65,20 @@
 			<a class="text-left a-left">Изготовление лестниц на бетонном основании</a>
 			<div class="block-title-new">
 				<h1 class="title-new text-center">Лестницы Вертикаль СПб от производителя</h1>
+				<div class="images">
+					@model IEnumerable<StairsManufacturing.Models.Index.IndexModel>
+					@foreach (var item in Model) {
+						<div class="images-main">
+							<img class="img" src="@Url.Content(item.IMAGE_PHOTO.Replace("wwwroot", "~"))" /> <br />
+							<p class="title-image text-center">@item.NAME_PHOTO </p><br />
+						</div>
+					}
+				</div>
+				<div class="block-text-content">
+					<p class="text-content">Производство лестниц на заказ — основная сфера деятельности компании «Лестницы Вертикаль СПб». В данном направлении мы работаем давно, поэтому успели накопить огромный запас профессиональных знаний и навыков. Сегодня это помогает нам успешно решать, как типовые, так и нестандартные задачи, поставленные клиентами. Обратившись к нам, вы можете заказать и одномаршевую лестницу из дерева для дачи, и сложную модель с одной или несколькими площадками для загородного дома. Причем и в том и в другом случае мы гарантируем индивидуальный подход, высокое качество изготовления, оптимальные цены.</p>
+				</div>
 			</div>
-		</div>			
+		</div>		
 	</div>
 </body>
 </html>

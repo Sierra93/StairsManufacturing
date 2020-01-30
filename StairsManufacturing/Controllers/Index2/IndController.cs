@@ -1,27 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Data.SqlClient;
-using Microsoft.Extensions.Logging;
 using StairsManufacturing.Models;
-using StairsManufacturing.Models.Context;
 using StairsManufacturing.Models.Index;
+using StairsManufacturing.Models.Context;
+using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
 
-namespace StairsManufacturing.Controllers {
-    public class HomeController : Controller {
+namespace StairsManufacturing.Controllers.Index {
+    [Route("api/odata")]
+    [ApiController]
+    public class IndController : Controller {
         ApplicationContext db;
         string connectionString = "Server=lestnicudom.ru,1433; Database=u0936707_manufacturingdb; Persist Security Info=False; User ID=u0936707_admin; Password=4PbefUvjVAwsfHV; MultipleActiveResultSets=False; Encrypt=True; TrustServerCertificate=true; Connection Timeout=30;";
-        public HomeController(ApplicationContext _context) {
-            db = _context; 
+        public IndController(ApplicationContext _context, IConfiguration config) {
+            db = _context;
         }
         /// <summary>
         /// Получение изображений для главной страницы
         /// </summary>
         /// <returns></returns>
-        public IActionResult Index() {
+        [HttpPost]
+        [Route("getmainimages")]
+        public IActionResult GetImages() {
             var model = GetImagesFromDB();
             return View(model);
         }
