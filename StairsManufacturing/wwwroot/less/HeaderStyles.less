@@ -1,14 +1,11 @@
 ﻿body {
     font-family: 'Montserrat', sans-serif;
 }
-.container {
-    //background-color: #f8f8f8;
-    padding: 1%;
-    max-width: 1400px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+// Чтобы растянуть блок на всю ширину без скролла
+.container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    overflow-x: hidden !important;
 }
 .ul {
     list-style: none;
@@ -28,23 +25,30 @@
 }
 .header-down-fon {
     background-color: #efefef;
+
+    ul > li > a {
+        text-decoration: none !important;
+        color: #999999;
+    }
+
+    &:hover {
+        color: #ff9900 !important;
+        transition: 0.5s;
+    }
 }
 .address {
     padding: 20px 0 20px 0;
     margin-left: 50px;
 }
 .title-1 {
-    //padding-bottom: 20px;
     border-bottom: 1px solid #efefef;
     margin-bottom: 40px;
-    border-bottom: 1px solid #efefef;
-    margin-bottom: 40px;
-    width: 300px;
+    max-width: 100% !important;
     margin-left: 40px;
 }
 .container > before-fon-top {
     font-weight: 400;
-    display: flex!important;
+    display: flex !important;
 }
 .title-new {
     margin-top: -348px;
@@ -58,13 +62,23 @@
     margin-left: 50px;
     display: flex;
     flex-direction: column;
+
+    a {
+        text-decoration: none !important;
+        color: #999999;
+
+        &:hover {
+            color: #ff9900 !important;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+    }
 }
 .left-menu {
     font-family: 'Montserrat', sans-serif;
     list-style: none;
 }
 .a-left {
-    //padding: 15px 0 15px 0;
     border-bottom: 1px solid #efefef;
     margin-bottom: 40px;
     width: 300px;
@@ -72,4 +86,36 @@
 }
 .header {
     margin-bottom: -15px;
+    background-color: #f8f8f8;
+}
+.row-header {
+    flex-wrap: nowrap !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+// Для описания на черном фоне
+.row-black {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+
+    a {
+        text-decoration: none !important;
+        color: white !important;
+        padding: 15px 0 15px 0;
+
+        &:hover {
+            color: #ff9900 !important;
+            transition: 0.5s;
+        }
+    }
+}
+// Для меню топа
+.menu-top > ul > li > a {
+    text-decoration: none !important;
+    color: #999999;
+
+    &:hover {
+        color: #ff9900 !important;
+        transition: 0.5s;
+    }
 }

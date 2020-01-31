@@ -1,1 +1,18 @@
-﻿
+﻿html {
+  position: relative;
+  min-height: 100%;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: black;
+  padding: 40px 0 40px 0;
+  color: #FFF;
+}
+.block-empty {
+  margin-bottom: 100px;
+}
+.foot {
+  align-items: center;
+}
