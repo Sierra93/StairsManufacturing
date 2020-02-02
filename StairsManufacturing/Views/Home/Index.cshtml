@@ -69,23 +69,30 @@
 			&nbsp;
 		</div>
 		<div class="block-left-menu">
-			<a class="text-left a-left">Изготовление деревянных лестниц</a>
-			<a class="text-left a-left">Изготовление лестниц эконом класса</a>
-			<a class="text-left a-left">Изготовление лестниц на металлическом основании</a>
-			<a class="text-left a-left">Изготовление лестниц на бетонном основании</a>
+			<a class="text-left a-left">Изготовление лестниц из дерева</a>
+			<a class="text-left a-left">Изготовление лестниц на бетоном основании из Бука</a>
+			<a class="text-left a-left">Изготовление лестниц на бетоном основании с металлическим Ограждением</a>
+			<a class="text-left a-left">Изготовление лестниц на металлическом каркасе</a>
+			<a class="text-left a-left">Изготовление лестниц с подсветкой</a>
+			<a class="text-left a-left">Изготовление лестниц эконом класса из сосны</a>
 			<div class="block-title-new">
 				<h1 class="title-new text-center">Лестницы Вертикаль СПб от производителя</h1>
 				<div class="images">
 					@model IEnumerable<StairsManufacturing.Models.Index.IndexModel>
 					@foreach (var item in Model) {
+					<form asp-action="GetDetails" method="post" enctype="multipart/form-data" asp-controller="GetDetailsImages">
+						<div class="form-group">
+							<input type="text" name="id" class="hidden" value="@item.ID" />
+						</div>
 						<div class="images-main text-center">
 							<img class="img" src="@Url.Content(item.IMAGE_PHOTO.Replace("wwwroot", "~"))" /> <br />
-							<a class="title-image link text-center">@item.NAME_PHOTO </a><br />
+							<button type="submit" class="btn btn-link title-image link text-center">@item.NAME_PHOTO </button><br />
 						</div>
+					</form>						
 					}
 				</div>
 				<div class="block-text-content">
-					<p class="text-content">Мастерская лестниц на заказ — основная сфера деятельности компании «Лестницы Вертикаль СПб». В данном направлении мы работаем давно, поэтому успели накопить огромный запас профессиональных знаний и навыков. Сегодня это помогает нам успешно решать, как типовые, так и нестандартные задачи, поставленные клиентами. Обратившись к нам, вы можете заказать и одномаршевую лестницу из дерева для дачи, и сложную модель с одной или несколькими площадками для загородного дома. Причем и в том и в другом случае мы гарантируем индивидуальный подход, высокое качество изготовления, оптимальные цены.</p>
+					<p class="text-content">Мастерская лестниц на заказ — основная сфера деятельности компании «Лестницы Вертикаль СПб». В данном направлении мы работаем с 2011 года, поэтому успели накопить огромный запас профессиональных знаний и навыков. Сегодня это помогает нам успешно решать, как типовые, так и нестандартные задачи, поставленные клиентами. Обратившись к нам, вы можете заказать и одномаршевую лестницу из дерева для дачи, и сложную модель с одной или несколькими площадками для загородного дома. Причем и в том и в другом случае мы гарантируем индивидуальный подход, высокое качество изготовления, оптимальные цены.</p>
 				</div>
 			</div>
 		</div>
@@ -95,14 +102,12 @@
 		<div class="row">
 				<div class="col-lg-3">
 					<span>
-						БОЛЕЕ 25 ЛЕТ<br />
-						НА РЫНКЕ
+						НА РЫНКЕ С 2011 ГОДА
 					</span>
 				</div>
 				<div class="col-lg-3">
 					<span>
-						ОПЫТНЫЕ МАСТЕРА<br />
-						ВЫСШЕЙ КАТЕГОРИИ
+						ОПЫТНЫЕ МАСТЕРА
 					</span>
 				</div>
 				<div class="col-lg-3">
@@ -113,7 +118,7 @@
 				</div>
 				<div class="col-lg-3">
 					<span>
-						БОЛЕЕ 1000<br />
+						БОЛЕЕ 500<br />
 						ВЫПОЛНЕННЫХ ЗАКАЗОВ
 					</span>
 				</div>
