@@ -43,14 +43,14 @@
 			<div class="row row-black">
 				<div class="col-lg-6 text-left">
 					<a href="#">
-						Лестницы Вертикаль СПб
+						<h1>Лестницы Вертикаль СПб</h1>
 						Лестницы из Дуба, Бука, без скрипа.<br />
 						Ограждение из стекла , ковка , резьба.<br />
 						Деревянные Балки. Кабинеты, ОГРАЖДЕНИЕ для террас.<br />
 						Срочные заказы.
 					</a>
 				</div>
-				<div class="col-lg-6 text-right">
+				<div class="col-lg-6 text-right cont">
 					<h3>+7 921 969-67-54</h3><br />
 					<h3>Михаил</h3>
 				</div>
@@ -63,7 +63,7 @@
 			</ul>
 		</div>
 		<div class="col-lg-2 title-1">
-			<p>Лестницы</p>
+			<p>Лестницы Вертикаль СПб</p>
 		</div>
 		<div class="col-lg-10">
 			&nbsp;
@@ -76,7 +76,7 @@
 			<a class="text-left a-left">Изготовление лестниц эконом класса из сосны</a>
 			<div class="block-title-new">
 				<h1 class="title-new text-center">Лестницы Вертикаль СПб от производителя</h1>
-				<div id="idImg" class="images" style="margin-top: 300px !important;">
+				<div id="idImg" class="images">
 					@model IEnumerable<StairsManufacturing.Models.Index.IndexModel>
 					@foreach (var item in Model) {
 						<form class="form-space" asp-action="GetDetails" method="post" enctype="multipart/form-data" asp-controller="GetDetailsImages">
@@ -93,34 +93,37 @@
 				<div class="block-text-content">
 					<p class="text-content">Мастерская лестниц на заказ — основная сфера деятельности компании «Лестницы Вертикаль СПб». В данном направлении мы работаем с 2011 года, поэтому успели накопить огромный запас профессиональных знаний и навыков. Сегодня это помогает нам успешно решать, как типовые, так и нестандартные задачи, поставленные клиентами. Обратившись к нам, вы можете заказать и одномаршевую лестницу из дерева для дачи, и сложную модель с одной или несколькими площадками для загородного дома. Причем и в том и в другом случае мы гарантируем индивидуальный подход, высокое качество изготовления, оптимальные цены.</p>
 				</div>
+				<div class="col-lg-12 text-center block-btn-accept">
+					<button type="submit" class="btn btn-success form-accept">РАСЧЕТ СТОИМОСТИ ЛЕСТНИЦЫ</button>
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="block-empty">&nbsp;</div>
+	@*<div class="block-empty">&nbsp;</div>*@
 	<div class="advantages col-lg-12">
-		<div class="row">
-				<div class="col-lg-3">
-					<span>
-						НА РЫНКЕ С 2011 ГОДА
-					</span>
-				</div>
-				<div class="col-lg-3">
-					<span>
-						ОПЫТНЫЕ МАСТЕРА
-					</span>
-				</div>
-				<div class="col-lg-3">
-					<span>
-						СОВРЕМЕННОЕ<br />
-						ОБОРУДОВАНИЕ
-					</span>
-				</div>
-				<div class="col-lg-3">
-					<span>
-						БОЛЕЕ 500<br />
-						ВЫПОЛНЕННЫХ ЗАКАЗОВ
-					</span>
-				</div>
+		<div class="row r-space">
+			<div class="col-lg-2 preim">
+				<span>
+					НА РЫНКЕ С 2011 ГОДА
+				</span>
+			</div>
+			<div class="col-lg-2 preim">
+				<span>
+					ОПЫТНЫЕ МАСТЕРА
+				</span>
+			</div>
+			<div class="col-lg-2 preim">
+				<span>
+					СОВРЕМЕННОЕ<br />
+					ОБОРУДОВАНИЕ
+				</span>
+			</div>
+			<div class="col-lg-2 preim">
+				<span>
+					БОЛЕЕ 500<br />
+					ВЫПОЛНЕННЫХ ЗАКАЗОВ
+				</span>
+			</div>
 		</div>
 	</div>
 	<!-- Футер -->
@@ -129,8 +132,10 @@
 			<div class="col-lg-6 text-left">
 				<h3>Лестницы Вертикаль СПб</h3>
 			</div>
-			<div class="col-lg-6 text-right">
-				<span>Здесь тоже будет текст</span>
+			<div class="col-lg-6 text-right information">
+				<div>
+					<span class="foot-link" href="#">«Лестницы Вертикаль СПб» – столярная мастерская по изготовлению лестниц ручной работы класса PREMIUM. Изготавливает на заказ и монтирует "под ключ" лестницы по индивидуальным и типовым проектам с 2011 года.</span>
+				</div>
 			</div>
 		</div>
 	</div>

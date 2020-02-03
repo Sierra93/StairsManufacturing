@@ -43,7 +43,7 @@
             <div class="row row-black">
                 <div class="col-lg-6 text-left">
                     <a href="#">
-                        Лестницы Вертикаль СПб
+                        <h1>Лестницы Вертикаль СПб</h1>
                         Лестницы из Дуба, Бука, без скрипа.<br />
                         Ограждение из стекла , ковка , резьба.<br />
                         Деревянные Балки. Кабинеты, ОГРАЖДЕНИЕ для террас.<br />
@@ -63,7 +63,7 @@
             </ul>
         </div>
         <div class="col-lg-2 title-1">
-            <p>Лестницы</p>
+            <p>Лестницы Вертикаль СПб</p>
         </div>
         <div class="col-lg-10">
             &nbsp;
@@ -75,7 +75,7 @@
             <a class="text-left a-left">Изготовление лестниц с подсветкой</a>
             <a class="text-left a-left">Изготовление лестниц эконом класса из сосны</a>
             <div class="block-title-new">
-                <h1 class="title-new text-center">Лестницы Вертикаль СПб от производителя</h1>
+                @*<h1 class="title-new text-center">Лестницы Вертикаль СПб от производителя</h1>*@
                 @*<div class="images">
                 @model IEnumerable<StairsManufacturing.Models.Index.IndexModel>
                 @foreach (var item in Model) {
@@ -93,7 +93,7 @@
                 <div id="idDopImg" class="images">
                     @model IEnumerable<StairsManufacturing.Models.Index.IndexModel>
                     @foreach (var el in Model) {
-                        <div class="col-lg-12">
+                        <div class="col-lg-12 price-title">
                             <h1 id="title-dop" class="text-center">@el.NAME_PHOTO</h1>
                             <h3 class="text-center">@el.PRICE руб.</h3>
                         </div>
@@ -114,33 +114,33 @@
             </div>
         </div>
     </div>
-    <div class="block-empty">&nbsp;</div>
-    <div class="advantages col-lg-12">
-        <div class="row">
-            <div class="col-lg-3">
-                <span>
-                    НА РЫНКЕ С 2011 ГОДА
-                </span>
-            </div>
-            <div class="col-lg-3">
-                <span>
-                    ОПЫТНЫЕ МАСТЕРА
-                </span>
-            </div>
-            <div class="col-lg-3">
-                <span>
-                    СОВРЕМЕННОЕ<br />
-                    ОБОРУДОВАНИЕ
-                </span>
-            </div>
-            <div class="col-lg-3">
-                <span>
-                    БОЛЕЕ 500<br />
-                    ВЫПОЛНЕННЫХ ЗАКАЗОВ
-                </span>
-            </div>
+    @*<div class="block-empty">&nbsp;</div>*@
+<div class="advantages col-lg-12">
+    <div class="row r-space">
+        <div class="col-lg-2 preim">
+            <span>
+                НА РЫНКЕ С 2011 ГОДА
+            </span>
+        </div>
+        <div class="col-lg-2 preim">
+            <span>
+                ОПЫТНЫЕ МАСТЕРА
+            </span>
+        </div>
+        <div class="col-lg-2 preim">
+            <span>
+                СОВРЕМЕННОЕ<br />
+                ОБОРУДОВАНИЕ
+            </span>
+        </div>
+        <div class="col-lg-2 preim">
+            <span>
+                БОЛЕЕ 500<br />
+                ВЫПОЛНЕННЫХ ЗАКАЗОВ
+            </span>
         </div>
     </div>
+</div>
     <!-- Футер -->
     <div class="footer col-lg-12">
         <div class="row foot">
@@ -148,7 +148,9 @@
                 <h3>Лестницы Вертикаль СПб</h3>
             </div>
             <div class="col-lg-6 text-right">
-                <span>Здесь тоже будет текст</span>
+                <div>
+                    <span class="foot-link" href="#">«Лестницы Вертикаль СПб» – столярная мастерская по изготовлению лестниц ручной работы класса PREMIUM. Изготавливает на заказ и монтирует "под ключ" лестницы по индивидуальным и типовым проектам с 2011 года.</span>
+                </div>
             </div>
         </div>
     </div>
