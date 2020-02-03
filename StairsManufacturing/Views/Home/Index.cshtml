@@ -70,25 +70,24 @@
 		</div>
 		<div id="idTest" class="block-left-menu">
 			<a class="text-left a-left">Изготовление лестниц из дерева</a>
-			<a class="text-left a-left">Изготовление лестниц на бетоном основании из Бука</a>
-			<a class="text-left a-left">Изготовление лестниц на бетоном основании с металлическим Ограждением</a>
+			<a class="text-left a-left">Изготовление лестниц на бетоном основании</a>
 			<a class="text-left a-left">Изготовление лестниц на металлическом каркасе</a>
 			<a class="text-left a-left">Изготовление лестниц с подсветкой</a>
 			<a class="text-left a-left">Изготовление лестниц эконом класса из сосны</a>
 			<div class="block-title-new">
 				<h1 class="title-new text-center">Лестницы Вертикаль СПб от производителя</h1>
-				<div class="images">
+				<div id="idImg" class="images" style="margin-top: 300px !important;">
 					@model IEnumerable<StairsManufacturing.Models.Index.IndexModel>
 					@foreach (var item in Model) {
-					<form class="form-space" asp-action="GetDetails" method="post" enctype="multipart/form-data" asp-controller="GetDetailsImages">
-						<div class="form-group">
-							<input type="text" name="id" class="hidden" value="@item.ID" />
-						</div>
-						<div class="images-main text-center">
-							<img class="img" src="@Url.Content(item.IMAGE_PHOTO.Replace("wwwroot", "~"))" /> <br />
-							<button id="idTestSpace" type="submit" class="btn btn-link title-image text-center">@item.NAME_PHOTO </button><br />
-						</div>
-					</form>						
+						<form class="form-space" asp-action="GetDetails" method="post" enctype="multipart/form-data" asp-controller="GetDetailsImages">
+							<div class="form-group">
+								<input type="text" name="id" class="hidden" value="@item.ID" />
+							</div>
+							<div class="images-main text-center">
+								<img class="img" src="@Url.Content(item.IMAGE_PHOTO.Replace("wwwroot", "~"))" /> <br />
+								<button id="idTestSpace" type="submit" class="btn btn-link title-image text-center">@item.NAME_PHOTO </button><br />
+							</div>
+						</form>
 					}
 				</div>
 				<div class="block-text-content">
