@@ -5,6 +5,7 @@
   padding-left: 0 !important;
   padding-right: 0 !important;
   overflow-x: hidden !important;
+  overflow: hidden !important;
 }
 .ul {
   list-style: none;
@@ -67,6 +68,9 @@
   color: #ff9900 !important;
   transition: 0.5s;
   cursor: pointer;
+}
+.for-overflow {
+  overflow: hidden !important;
 }
 .left-menu {
   font-family: 'Montserrat', sans-serif;

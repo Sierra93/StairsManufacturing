@@ -1,11 +1,12 @@
 ﻿body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;    
 }
 // Чтобы растянуть блок на всю ширину без скролла
 .container-fluid {
     padding-left: 0 !important;
     padding-right: 0 !important;
     overflow-x: hidden !important;
+    overflow: hidden !important;
 }
 .ul {
     list-style: none;
@@ -57,7 +58,7 @@
     font-weight: 400;
     font-size: 28px;
 }
-.block-left-menu {
+.block-left-menu {    
     font-family: 'Montserrat', sans-serif;
     margin-left: 50px;
     display: flex;
@@ -73,6 +74,9 @@
             cursor: pointer;
         }
     }
+}
+.for-overflow {
+    overflow: hidden !important;
 }
 .left-menu {
     font-family: 'Montserrat', sans-serif;

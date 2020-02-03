@@ -1,16 +1,157 @@
-﻿
-@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
-
-<html>
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>GetDetails</title>
+    <title>Изготовление лестниц - На деревянном каркасе, на металлической и на бетоном основании</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="~/css/HeaderStyles.css" rel="stylesheet" />
+    <link href="~/css/MainStyles.css" rel="stylesheet" />
+    <link href="~/css/FooterStyles.css" rel="stylesheet" />
+    <link href='//fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
 </head>
 <body>
-    <h1>Страница подробностей фото</h1>
+    <!-- Блок контента хидера -->
+    <div class="container-fluid">
+        <div class="col-lg-12 header">
+            <div class="row row-header">
+                <div class="col-lg-6 text-left address">
+                    <img src="https://img.icons8.com/small/16/000000/order-delivered.png">
+                    <span>Санкт-Петербург</span>
+                </div>
+                <div class="col-lg-6 menu-top text-right">
+                    <ul class="ul">
+                        <li class="menu-li"><a href="#">Проекты</a></li>
+                        <li class="menu-li"><a href="#">Прайс-лист</a></li>
+                        <li class="menu-li"><a href="#">Услуги</a></li>
+                        <li class="menu-li"><a href="#">Статьи</a></li>
+                        <li class="menu-li"><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 header-fon">
+            <div class="row row-black">
+                <div class="col-lg-6 text-left">
+                    <a href="#">
+                        Лестницы Вертикаль СПб
+                        Лестницы из Дуба, Бука, без скрипа.<br />
+                        Ограждение из стекла , ковка , резьба.<br />
+                        Деревянные Балки. Кабинеты, ОГРАЖДЕНИЕ для террас.<br />
+                        Срочные заказы.
+                    </a>
+                </div>
+                <div class="col-lg-6 text-right">
+                    <h3>+7 921 969-67-54</h3><br />
+                    <h3>Михаил</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 header-down-fon">
+            <ul class="ul">
+                <li class="menu-li"><a href="#">Изготовление лестниц</a></li>
+                <li class="menu-li"><a href="#">Облицовка бетонных лестниц</a></li>
+            </ul>
+        </div>
+        <div class="col-lg-2 title-1">
+            <p>Лестницы</p>
+        </div>
+        <div class="col-lg-10">
+            &nbsp;
+        </div>
+        <div id="idTest" class="block-left-menu">
+            <a class="text-left a-left">Изготовление лестниц из дерева</a>
+            <a class="text-left a-left">Изготовление лестниц на бетоном основании из Бука</a>
+            <a class="text-left a-left">Изготовление лестниц на бетоном основании с металлическим Ограждением</a>
+            <a class="text-left a-left">Изготовление лестниц на металлическом каркасе</a>
+            <a class="text-left a-left">Изготовление лестниц с подсветкой</a>
+            <a class="text-left a-left">Изготовление лестниц эконом класса из сосны</a>
+            <div class="block-title-new">
+                <h1 class="title-new text-center">Лестницы Вертикаль СПб от производителя</h1>
+                @*<div class="images">
+                @model IEnumerable<StairsManufacturing.Models.Index.IndexModel>
+                @foreach (var item in Model) {
+                    <form asp-action="GetDetails" method="post" enctype="multipart/form-data" asp-controller="GetDetailsImages">
+                        <div class="form-group">
+                            <input type="text" name="id" class="hidden" value="@item.ID" />
+                        </div>
+                        <div class="images-main text-center">
+                            <img class="img" src="@Url.Content(item.IMAGE_PHOTO.Replace("wwwroot", "~"))" /> <br />
+                            <button type="submit" class="btn btn-link title-image link text-center">@item.NAME_PHOTO </button><br />
+                        </div>
+                    </form>
+                }
+            </div>*@
+                <div id="idDopImg" class="images">
+                    @model IEnumerable<StairsManufacturing.Models.Index.IndexModel>
+                    @foreach (var el in Model) {
+                        <div class="col-lg-12">
+                            <h1 id="title-dop" class="text-center">@el.NAME_PHOTO</h1>
+                            <h3 class="text-center">@el.PRICE руб.</h3>
+                        </div>
+                        break;
+                    }
+                    @foreach (var item in Model) {
+                        <div id="idImagesMain" class="images-main text-center">
+                            <div>
+                                <img class="dop-img" width="200" height="200" src="@Url.Content(item.IMAGE_PHOTO.Replace("wwwroot", "~"))" /> <br />
+                            </div>
+                            @*<button type="submit" class="btn btn-link title-image link text-center">@item.NAME_PHOTO </button><br />*@
+                        </div>
+                    }
+                </div>
+                @*<div class="block-text-content">
+                <p class="text-content">Мастерская лестниц на заказ — основная сфера деятельности компании «Лестницы Вертикаль СПб». В данном направлении мы работаем с 2011 года, поэтому успели накопить огромный запас профессиональных знаний и навыков. Сегодня это помогает нам успешно решать, как типовые, так и нестандартные задачи, поставленные клиентами. Обратившись к нам, вы можете заказать и одномаршевую лестницу из дерева для дачи, и сложную модель с одной или несколькими площадками для загородного дома. Причем и в том и в другом случае мы гарантируем индивидуальный подход, высокое качество изготовления, оптимальные цены.</p>
+            </div>*@
+            </div>
+        </div>
+    </div>
+    <div class="block-empty">&nbsp;</div>
+    <div class="advantages col-lg-12">
+        <div class="row">
+            <div class="col-lg-3">
+                <span>
+                    НА РЫНКЕ С 2011 ГОДА
+                </span>
+            </div>
+            <div class="col-lg-3">
+                <span>
+                    ОПЫТНЫЕ МАСТЕРА
+                </span>
+            </div>
+            <div class="col-lg-3">
+                <span>
+                    СОВРЕМЕННОЕ<br />
+                    ОБОРУДОВАНИЕ
+                </span>
+            </div>
+            <div class="col-lg-3">
+                <span>
+                    БОЛЕЕ 500<br />
+                    ВЫПОЛНЕННЫХ ЗАКАЗОВ
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- Футер -->
+    <div class="footer col-lg-12">
+        <div class="row foot">
+            <div class="col-lg-6 text-left">
+                <h3>Лестницы Вертикаль СПб</h3>
+            </div>
+            <div class="col-lg-6 text-right">
+                <span>Здесь тоже будет текст</span>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

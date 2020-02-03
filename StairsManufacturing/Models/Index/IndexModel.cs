@@ -9,5 +9,6 @@ namespace StairsManufacturing.Models.Index {
         public string NAME_PHOTO { get; set; }
         public string IMAGE_PHOTO { get; set; }
         public int CATEGORY { get; set; }
+        public string PRICE { get; set; }
     }
 }
