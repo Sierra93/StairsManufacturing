@@ -99,3 +99,10 @@
   display: flex;
   justify-content: space-around;
 }
+.header-fon > .row-black > .return {
+  cursor: pointer !important;
+  color: white !important;
+}
+.header-fon > .row-black > .return:hover {
+  text-decoration: none !important;
+}

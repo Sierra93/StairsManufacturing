@@ -18,6 +18,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/themes/smoothness/jquery-ui.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+	<script src="~/js/site.js"></script>
 </head>
 <body>
 	<!-- Блок контента хидера -->
@@ -42,9 +43,8 @@
 		<div class="col-lg-12 header-fon">
 			<div class="row row-black">
 				<div class="col-lg-6 text-left">
-					<a href="#">
 						<h1>Лестницы Вертикаль СПб</h1>
-						Лестницы из Дуба, Бука, без скрипа.<br />
+						<a href="javascript:;" onclick="returnMain();return false;" class="return">Лестницы из Дуба, Бука, без скрипа.<br />
 						Ограждение из стекла , ковка , резьба.<br />
 						Деревянные Балки. Кабинеты, ОГРАЖДЕНИЕ для террас.<br />
 						Срочные заказы.
@@ -69,11 +69,11 @@
 			&nbsp;
 		</div>
 		<div id="idTest" class="block-left-menu">
-			<a class="text-left a-left">Изготовление лестниц из дерева</a>
-			<a class="text-left a-left">Изготовление лестниц на бетоном основании</a>
-			<a class="text-left a-left">Изготовление лестниц на металлическом каркасе</a>
-			<a class="text-left a-left">Изготовление лестниц с подсветкой</a>
-			<a class="text-left a-left">Изготовление лестниц эконом класса из сосны</a>
+			<a asp-controller="GetDetailsImages" asp-action="GetDetails" asp-route-id="1" class="text-left a-left">Изготовление лестниц из дерева</a>
+			<a asp-controller="GetDetailsImages" asp-action="GetDetails" asp-route-id="3" class="text-left a-left">Изготовление лестниц на бетоном основании</a>
+			<a asp-controller="GetDetailsImages" asp-action="GetDetails" asp-route-id="4" class="text-left a-left">Изготовление лестниц на металлическом каркасе</a>
+			<a asp-controller="GetDetailsImages" asp-action="GetDetails" asp-route-id="5" class="text-left a-left">Изготовление лестниц с подсветкой</a>
+			<a asp-controller="GetDetailsImages" asp-action="GetDetails" asp-route-id="6" class="text-left a-left">Изготовление лестниц эконом класса из сосны</a>
 			<div class="block-title-new">
 				<h1 class="title-new text-center">Лестницы Вертикаль СПб от производителя</h1>
 				<div id="idImg" class="images">
@@ -134,7 +134,7 @@
 			</div>
 			<div class="col-lg-6 text-right information">
 				<div>
-					<span class="foot-link" href="#">«Лестницы Вертикаль СПб» – столярная мастерская по изготовлению лестниц ручной работы класса PREMIUM. Изготавливает на заказ и монтирует "под ключ" лестницы по индивидуальным и типовым проектам с 2011 года.</span>
+					<span class="foot-link">«Лестницы Вертикаль СПб» – столярная мастерская по изготовлению лестниц ручной работы класса PREMIUM. Изготавливает на заказ и монтирует "под ключ" лестницы по индивидуальным и типовым проектам с 2011 года.</span>
 				</div>
 			</div>
 		</div>
