@@ -105,6 +105,9 @@
 .header-fon > .row-black > .return:hover {
   text-decoration: none !important;
 }
+.price-title {
+  margin-left: -100px !important;
+}
 /* Стили для адаптивности */
 /* xs (<=543px) */
 @media (max-width: 575px) {
