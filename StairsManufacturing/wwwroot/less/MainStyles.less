@@ -95,7 +95,7 @@
 }
 .block-btn-accept {
     padding: 50px 0 50px 0;
-    border-top: 1px solid #efefef;
+    //border-top: 1px solid #efefef;
     //padding: 30px 0 30px 0;
 }
 .preim {
@@ -113,4 +113,79 @@
     &:hover {
         text-decoration: none !important;
     }
+}
+/* Стили для адаптивности */
+/* xs (<=543px) */
+@media (max-width: 575px) {
+    .row-header {
+        flex-direction: column !important;
+    }
+    .menu-top > .ul > .menu-li {
+        margin-left: 5px !important;
+    }
+    .cont {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .title-new {
+        margin-top: 400px;
+        /* display: flex; */
+        font-family: 'Montserrat', sans-serif;
+        margin-left: -50px;
+        font-weight: 400;
+        font-size: 20px;
+    }
+    .images {
+        display: flex;
+        flex-wrap: wrap;
+        /* margin-left: 300px; */
+        margin-top: 0 !important;
+        margin-bottom: 60px;
+        margin-left: -50px;
+    }
+    .text-content {
+        /* margin-left: 400px; */
+        font-family: 'Montserrat', sans-serif;
+    }
+    .text-content {
+        /* margin-left: 400px; */
+        font-family: 'Montserrat', sans-serif;
+        margin-left: -44px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #idTest {
+        overflow: initial !important;
+    }
+    #content > p {
+        position: relative;
+        width: 90% !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+    .block-btn-accept > .form-accept {
+        color: #fff !important;
+        background-color: #28a745 !important;
+        border-color: #28a745 !important;
+        width: 200px !important;
+        font-size: 10px !important;
+        display: flex !important;
+        border-top: 1px solid white !important;
+    }
+    .advantages {
+        padding-left: 60px !important;
+    }
+    #block-title-new {
+        margin-top: 50px !important;
+    }
+    .dop-main {
+        margin-left: 50px;
+    }
+}
+/* md (>=768 и <=991) 
+        @media (min-width: 768px) and (max-width: 991px) {
+        }
+        /* lg (>=992 и <=1199) */
+@media (min-width: 992px) and (max-width: 1199px) {
 }

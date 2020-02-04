@@ -22,13 +22,13 @@
 <body>
     <!-- Блок контента хидера -->
     <div class="container-fluid">
-        <div class="col-lg-12 header">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 header">
             <div class="row row-header">
-                <div class="col-lg-6 text-left address">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-left address">
                     <img src="https://img.icons8.com/small/16/000000/order-delivered.png">
                     <span>Санкт-Петербург</span>
                 </div>
-                <div class="col-lg-6 menu-top text-right">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 menu-top text-right">
                     <ul class="ul">
                         <li class="menu-li"><a href="#">Проекты</a></li>
                         <li class="menu-li"><a href="#">Прайс-лист</a></li>
@@ -50,13 +50,13 @@
                         Срочные заказы.
                     </a>
                 </div>
-                <div class="col-lg-6 text-right">
+                <div class="col-lg-6 text-right cont">
                     <h3>+7 921 969-67-54</h3><br />
                     <h3>Михаил</h3>
                 </div>
             </div>
         </div>
-        <div class="col-lg-12 header-down-fon">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 header-down-fon">
             <ul class="ul">
                 <li class="menu-li"><a href="#">Изготовление лестниц</a></li>
                 <li class="menu-li"><a href="#">Облицовка бетонных лестниц</a></li>
@@ -74,7 +74,7 @@
             <a class="text-left a-left">Изготовление лестниц на металлическом каркасе</a>
             <a class="text-left a-left">Изготовление лестниц с подсветкой</a>
             <a class="text-left a-left">Изготовление лестниц эконом класса из сосны</a>
-            <div class="block-title-new">
+            <div id="block-title-new" class="block-title-new">
                 @*<h1 class="title-new text-center">Лестницы Вертикаль СПб от производителя</h1>*@
                 @*<div class="images">
                 @model IEnumerable<StairsManufacturing.Models.Index.IndexModel>
@@ -90,17 +90,17 @@
                     </form>
                 }
             </div>*@
-                <div id="idDopImg" class="images">
+                <div id="idDopImg" class="images col-md-12 col-sm-12 col-xs-12">
                     @model IEnumerable<StairsManufacturing.Models.Index.IndexModel>
                     @foreach (var el in Model) {
                         <div class="col-lg-12 price-title">
                             <h1 id="title-dop" class="text-center">@el.NAME_PHOTO</h1>
-                            <h3 class="text-center">@el.PRICE руб.</h3>
+                            <h3 class="text-center col-md-12 col-sm-12 col-xs-12">@el.PRICE руб.</h3>
                         </div>
                         break;
                     }
                     @foreach (var item in Model) {
-                        <div id="idImagesMain" class="images-main text-center">
+                        <div id="idImagesMain" class="images-main dop-main text-center">
                             <div>
                                 <img class="dop-img" width="200" height="200" src="@Url.Content(item.IMAGE_PHOTO.Replace("wwwroot", "~"))" /> <br />
                             </div>
@@ -115,7 +115,7 @@
         </div>
     </div>
     @*<div class="block-empty">&nbsp;</div>*@
-<div class="advantages col-lg-12">
+<div class="advantages col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div class="row r-space">
         <div class="col-lg-2 preim">
             <span>
