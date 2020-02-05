@@ -27,7 +27,7 @@ namespace StairsManufacturing.Controllers {
         /// </summary>
         /// <param name="model">Модель изображений</param>
         /// <returns></returns>
-        public List<IndexModel>GetImages(int id) {
+        public List<IndexModel> GetImages(int id) {
             List<IndexModel> collectionImages = new List<IndexModel>();
             using (var con = new SqlConnection(connectionString)) {
                 con.Open();
