@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
     <script src="~/js/site.js"></script>
+    <link rel="stylesheet" href="/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
 </head>
 <body>
     <!-- Блок контента хидера -->
@@ -86,25 +87,26 @@
                 }
                 <div id="idDopImg" class="images col-md-12 col-sm-12 col-xs-12">
                     <div class="slider" style="width: 50%; margin-left: 100px;">
-                        <div class="slider__wrapper">
-                            @foreach (var item in Model) {
-                                <div class="slider__item">
-
-                                    <div class="boo" style="height: 250px;">
-
-                                        <img width="200" height="200" src="@Url.Content(item.IMAGE_PHOTO.Replace("wwwroot", "~"))" /> <br />
-
-                                    </div>
-
-                                </div>
-                            }
-                        </div>
+						<div class="slider__wrapper">
+							@foreach (var item in Model) {
+								<div class="slider__item">
+									<div class="boo" style="height: 250px;">
+										<a class="fancybox-button" rel="fancybox-button" href="@Url.Content(item.IMAGE_PHOTO.Replace("wwwroot", "~"))">
+											<img width="200" height="200" src="@Url.Content(item.IMAGE_PHOTO.Replace("wwwroot", "~"))" /> <br />
+										</a>
+									</div>
+								</div>
+							}
+						</div>
                         <a class="slider__control slider__control_left" href="#" role="button"></a>
                         <a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>
                     </div>
                 </div>
                 <script>
-                    'use strict';
+					'use strict';
+					$('.imgs').click(function () {
+						$('.imgs').classList.toggle('show');
+    });
                     var multiItemSlider = (function () {
                         return function (selector, config) {
                             var
